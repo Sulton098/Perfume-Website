@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craftsmanship | Chanel Perfume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container-custom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- BACK LINK ----- */
+    .back-link {
+      display: inline-block;
+      margin: 30px 0 10px 0;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #a67c4e;
+      transform: translateX(-4px);
+    }
+
+    /* ----- HERO SECTION ----- */
+    .craft-hero {
+      padding: 20px 0 70px 0;
+      text-align: center;
+    }
+
+    .craft-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 5rem;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .craft-hero .gold-line {
+      width: 80px;
+      height: 2px;
+      background: #a67c4e;
+      margin: 0 auto 24px auto;
+    }
+
+    .craft-hero p {
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #6c6c6c;
+      text-transform: uppercase;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ----- INTRO SPLIT SECTION ----- */
+    .intro-split {
+      padding: 60px 0;
+    }
+
+    .intro-text {
+      padding-right: 40px;
+    }
+
+    .intro-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.6rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .intro-text p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .intro-text .gold-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #a67c4e;
+      font-style: italic;
+      border-left: 3px solid #a67c4e;
+      padding-left: 20px;
+      margin-top: 24px;
+    }
+
+    .intro-image {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .intro-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .intro-image .image-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      padding: 10px 20px;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      border-radius: 2px;
+    }
+
+    /* ----- PROCESS SECTION ----- */
+    .process-section {
+      padding: 80px 0;
+      background: #fcfaf8;
+      border-top: 1px solid rgba(0,0,0,0.03);
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.6rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .process-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 3.5rem;
+      color: #a67c4e;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .process-step h4 {
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .process-step p {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #6c6c6c;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ----- GALLERY SECTION (SINGLE LARGE IMAGE) ----- */
+    .gallery-section {
+      padding: 80px 0;
+    }
+
+    .single-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      height: 600px;
+      cursor: pointer;
+    }
+
+    .single-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+
+    .single-image-wrapper:hover img {
+      transform: scale(1.04);
+    }
+
+    .single-image-caption {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      padding: 12px 24px;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      border-radius: 2px;
+    }
+
+    /* ----- MATERIALS SECTION ----- */
+    .materials-section {
+      padding: 80px 0;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .materials-section .section-title {
+      color: #fff;
+    }
+
+    .materials-section .section-subtitle {
+      color: #a67c4e;
+    }
+
+    .material-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .material-card:hover {
+      background: rgba(255,255,255,0.03);
+      border-color: #a67c4e;
+      transform: translateY(-6px);
+    }
+
+    .material-card i {
+      font-size: 1.8rem;
+      color: #a67c4e;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .material-card h4 {
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .material-card p {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #b0a8a0;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ----- QUOTE SECTION ----- */
+    .quote-section {
+      padding: 100px 0;
+      text-align: center;
+      background: #f5f0eb;
+    }
+
+    .quote-section blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+
+    .quote-section cite {
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* ----- CTA SECTION ----- */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.6rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #b0a8a0;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background: #a67c4e;
+      color: #fff;
+      border: none;
+      padding: 16px 48px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      background: #ffffff;
+      color: #1a1a1a;
+      transform: scale(1.04);
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .craft-hero h1 {
+        font-size: 3rem;
+        letter-spacing: 6px;
+      }
+      .intro-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+      .intro-image {
+        height: 350px;
+      }
+      .intro-text h2 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+      }
+      .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
+      .quote-section blockquote {
+        font-size: 1.4rem;
+      }
+      .cta-section h2 {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
+      .single-image-wrapper {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .craft-hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+      }
+      .single-image-wrapper {
+        height: 300px;
+      }
+      .single-image-caption {
+        bottom: 16px;
+        left: 16px;
+        padding: 8px 16px;
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- BACK LINK -->
+  <!-- ============================================================ -->
+  <div class="container-custom">
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left me-2"></i> Back to Home
+    </a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="craft-hero">
+    <div class="container-custom">
+      <h1>Craftsmanship</h1>
+      <div class="gold-line"></div>
+      <p>The art of perfume, perfected over a century</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INTRO SPLIT SECTION -->
+  <!-- ============================================================ -->
+  <section class="intro-split">
+    <div class="container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="intro-text">
+            <h2>A Legacy of Excellence</h2>
+            <p>
+              Every Chanel fragrance begins with a vision — a scent that 
+              captures a moment, an emotion, a memory. From the fields of 
+              Grasse to the laboratories of Paris, our artisans blend 
+              tradition with innovation to create perfumes that transcend time.
+            </p>
+            <p>
+              Each bottle is a testament to the hands that crafted it — 
+              the growers who nurture the flowers, the perfumers who 
+              compose the notes, and the artisans who perfect every detail.
+            </p>
+            <p class="gold-quote">
+              "Luxury is not the opposite of poverty. It is the opposite of vulgarity."
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="intro-image">
+            <img src="ASSETS/Chanelcrafts4.webp" alt="Chanel Perfume Craftsmanship">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROCESS SECTION -->
+  <!-- ============================================================ -->
+  <section class="process-section">
+    <div class="container-custom">
+      <h2 class="section-title">The Process</h2>
+      <p class="section-subtitle">From flower to flacon</p>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="process-step">
+            <div class="process-number">01</div>
+            <h4>Harvest</h4>
+            <p>Rare flowers hand-picked at dawn in Grasse, France.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="process-step">
+            <div class="process-number">02</div>
+            <h4>Extraction</h4>
+            <p>Delicate essences captured through traditional methods.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="process-step">
+            <div class="process-number">03</div>
+            <h4>Composition</h4>
+            <p>Master perfumers blend notes into a timeless symphony.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="process-step">
+            <div class="process-number">04</div>
+            <h4>Bottling</h4>
+            <p>Each flacon finished by hand with precision and care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- GALLERY SECTION - SINGLE LARGE IMAGE -->
+  <!-- ============================================================ -->
+  <section class="gallery-section">
+    <div class="container-custom">
+      <h2 class="section-title">Inside the Atelier</h2>
+      <p class="section-subtitle">Moments of creation</p>
+
+      <div class="single-image-wrapper">
+        <img src="ASSETS/Chanelfactory1.webp" alt="Inside the Chanel Atelier">
+        <div class="single-image-caption">Atelier · Paris</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- MATERIALS SECTION -->
+  <!-- ============================================================ -->
+  <section class="materials-section">
+    <div class="container-custom">
+      <h2 class="section-title">The Materials</h2>
+      <p class="section-subtitle">Rare · Precious · Timeless</p>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="material-card">
+            <i class="fas fa-spa"></i>
+            <h4>Jasmine</h4>
+            <p>Hand-picked in Grasse, the heart of Chanel No. 5.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="material-card">
+            <i class="fas fa-seedling"></i>
+            <h4>May Rose</h4>
+            <p>A delicate flower harvested only a few weeks each year.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="material-card">
+            <i class="fas fa-tree"></i>
+            <h4>Sandalwood</h4>
+            <p>Sustainably sourced, adding warmth and depth.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="material-card">
+            <i class="fas fa-gem"></i>
+            <h4>Amber</h4>
+            <p>A golden resin that lingers on the skin for hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- QUOTE SECTION -->
+  <!-- ============================================================ -->
+  <section class="quote-section">
+    <div class="container-custom">
+      <blockquote>
+        "In order to be irreplaceable, one must always be different."
+      </blockquote>
+      <cite>— Coco Chanel</cite>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CTA SECTION -->
+  <!-- ============================================================ -->
+  <section class="cta-section">
+    <div class="container-custom">
+      <h2>Experience the Craft</h2>
+      <p>Discover the fragrances born from a century of artistry</p>
+      <a href="shop.html#products-section" class="cta-btn">Shop the Collection</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

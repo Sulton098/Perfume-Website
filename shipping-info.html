@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Info | Chanel Perfume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .container-custom {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- BACK LINK ----- */
+    .back-link {
+      display: inline-block;
+      margin: 40px 0 20px 0;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #a67c4e;
+      transform: translateX(-4px);
+    }
+
+    /* ----- PAGE WRAPPER ----- */
+    .shipping-page {
+      padding: 20px 0 80px 0;
+    }
+
+    /* ----- HEADER ----- */
+    .shipping-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .shipping-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 3.2rem;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .shipping-header .gold-line {
+      width: 60px;
+      height: 1.5px;
+      background: #a67c4e;
+      margin: 0 auto 20px auto;
+    }
+
+    .shipping-header p {
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    /* ----- ACCORDION-LIKE CARDS ----- */
+    .ship-card {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 2px;
+      padding: 28px 32px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ship-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #a67c4e;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s ease;
+    }
+
+    .ship-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .ship-card:hover {
+      border-color: rgba(166,124,78,0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      transform: translateX(4px);
+    }
+
+    .ship-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #f5f0eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a67c4e;
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+    }
+
+    .ship-card:hover .ship-icon {
+      background: #a67c4e;
+      color: #fff;
+      transform: rotate(8deg) scale(1.05);
+    }
+
+    .ship-content {
+      flex: 1;
+    }
+
+    .ship-content h3 {
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .ship-content p {
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: #6c6c6c;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .ship-content .highlight {
+      color: #a67c4e;
+      font-weight: 400;
+    }
+
+    /* ----- TIMELINE STRIP ----- */
+    .timeline-strip {
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .timeline-strip::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d6cdc0, transparent);
+      z-index: 0;
+    }
+
+    .timeline-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    .timeline-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #faf8f5;
+      border: 1.5px solid #d6cdc0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px auto;
+      color: #a67c4e;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-step:hover .timeline-dot {
+      background: #a67c4e;
+      border-color: #a67c4e;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .timeline-label {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+      font-weight: 400;
+    }
+
+    /* ----- NOTE FOOTER ----- */
+    .ship-note {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.8rem;
+      color: #999;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .ship-note i {
+      color: #a67c4e;
+      margin-right: 6px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .shipping-header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 6px;
+      }
+      .ship-card {
+        padding: 22px 24px;
+        gap: 18px;
+      }
+      .timeline-strip {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .timeline-strip::before {
+        display: none;
+      }
+      .timeline-step {
+        flex: 0 0 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shipping-header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
+      .ship-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+      }
+      .timeline-step {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-custom">
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left me-2"></i> Back to Home
+    </a>
+  </div>
+
+  <section class="shipping-page">
+    <div class="container-custom">
+
+      <!-- HEADER -->
+      <div class="shipping-header">
+        <h1>Shipping</h1>
+        <div class="gold-line"></div>
+        <p>Worldwide · Complimentary · Tracked</p>
+      </div>
+
+      <!-- TIMELINE STRIP -->
+      <div class="timeline-strip">
+        <div class="timeline-step">
+          <div class="timeline-dot"><i class="fas fa-box"></i></div>
+          <div class="timeline-label">Ordered</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"><i class="fas fa-check"></i></div>
+          <div class="timeline-label">Prepared</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"><i class="fas fa-truck"></i></div>
+          <div class="timeline-label">Shipped</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"><i class="fas fa-home"></i></div>
+          <div class="timeline-label">Delivered</div>
+        </div>
+      </div>
+
+      <!-- SHIPPING CARDS -->
+      <div class="ship-card">
+        <div class="ship-icon"><i class="fas fa-globe"></i></div>
+        <div class="ship-content">
+          <h3>Free Worldwide Shipping</h3>
+          <p>
+            Every order ships <span class="highlight">complimentary</span> to over 
+            100 countries. No minimum purchase required — because luxury should 
+            never come with hidden costs.
+          </p>
+        </div>
+      </div>
+
+      <div class="ship-card">
+        <div class="ship-icon"><i class="fas fa-clock"></i></div>
+        <div class="ship-content">
+          <h3>Delivery Time</h3>
+          <p>
+            Orders are prepared within <span class="highlight">1–2 business days</span>. 
+            Standard delivery takes 3–7 days depending on your location. 
+            Express options available at checkout.
+          </p>
+        </div>
+      </div>
+
+      <div class="ship-card">
+        <div class="ship-icon"><i class="fas fa-box-open"></i></div>
+        <div class="ship-content">
+          <h3>Signature Packaging</h3>
+          <p>
+            Each fragrance arrives in our iconic <span class="highlight">black and white</span> 
+            box, carefully wrapped and sealed with the Chanel ribbon — ready to gift 
+            or to treasure.
+          </p>
+        </div>
+      </div>
+
+      <div class="ship-card">
+        <div class="ship-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="ship-content">
+          <h3>Order Tracking</h3>
+          <p>
+            Receive a tracking link the moment your parcel leaves our atelier. 
+            Follow it every step of the way until it arrives at your door.
+          </p>
+        </div>
+      </div>
+
+      <div class="ship-card">
+        <div class="ship-icon"><i class="fas fa-undo"></i></div>
+        <div class="ship-content">
+          <h3>Easy Returns</h3>
+          <p>
+            Not in love? Return any unopened fragrance within 
+            <span class="highlight">30 days</span> for a full refund. 
+            We'll even cover the return shipping.
+          </p>
+        </div>
+      </div>
+
+      <!-- FOOTER NOTE -->
+      <div class="ship-note">
+        <i class="fas fa-gem"></i>
+        All orders are insured and handled with the utmost care.
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

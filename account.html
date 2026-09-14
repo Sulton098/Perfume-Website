@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | CHANEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ============================================================ */
+    /* RESET & BASE                                                 */
+    /* ============================================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container-custom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* NAVBAR                                                       */
+    /* ============================================================ */
+    .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      color: #111 !important;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand small {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-left: 8px;
+    }
+
+    .navbar {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      background: #faf8f5;
+    }
+
+    .nav-link {
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      color: #222 !important;
+      padding: 0 16px !important;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a67c4e !important;
+    }
+
+    /* ============================================================ */
+    /* ACCOUNT PAGE                                                 */
+    /* ============================================================ */
+    .account-page {
+      padding: 80px 0 120px 0;
+      min-height: calc(100vh - 400px);
+    }
+
+    .account-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .account-header .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a67c4e;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .account-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 4rem;
+      color: #1a1a1a;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .account-header h1 em {
+      font-style: italic;
+      color: #a67c4e;
+    }
+
+    .account-header p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      letter-spacing: 0.5px;
+    }
+
+    /* Card container */
+    .account-card {
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 50px 44px;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.03);
+      height: 100%;
+    }
+
+    .account-card.signup-card {
+      background: #f5f0eb;
+      border-color: rgba(166,124,78,0.1);
+    }
+
+    .card-label {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #a67c4e;
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .card-subtitle {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #6a6a6a;
+      margin-bottom: 32px;
+      letter-spacing: 0.3px;
+    }
+
+    /* Form fields */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      padding: 12px 0;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.3px;
+    }
+
+    .form-input:focus {
+      border-bottom-color: #a67c4e;
+    }
+
+    .form-input::placeholder {
+      color: #b0b0b0;
+      font-weight: 300;
+    }
+
+    /* Buttons */
+    .btn-account {
+      width: 100%;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 16px 40px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      margin-top: 12px;
+    }
+
+    .btn-account:hover {
+      background: #a67c4e;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(166,124,78,0.25);
+    }
+
+    .btn-account-outline {
+      width: 100%;
+      background: transparent;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      padding: 16px 40px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      margin-top: 12px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .btn-account-outline:hover {
+      background: #1a1a1a;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Divider */
+    .divider-or {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 30px 0;
+      color: #a0a0a0;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .divider-or::before,
+    .divider-or::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .divider-or::before {
+      margin-right: 16px;
+    }
+
+    .divider-or::after {
+      margin-left: 16px;
+    }
+
+    /* Forgot password link */
+    .forgot-link {
+      display: block;
+      text-align: right;
+      font-size: 0.75rem;
+      color: #a67c4e;
+      text-decoration: none;
+      margin-top: 12px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .forgot-link:hover {
+      color: #1a1a1a;
+    }
+
+    /* Remember me checkbox */
+    .remember-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .remember-row label {
+      font-size: 0.8rem;
+      color: #4a4a4a;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+    }
+
+    .remember-row input[type="checkbox"] {
+      margin-right: 8px;
+      accent-color: #a67c4e;
+      cursor: pointer;
+    }
+
+    /* Benefits list for signup card */
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+    }
+
+    .benefits-list li {
+      font-size: 0.85rem;
+      color: #4a4a4a;
+      font-weight: 300;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .benefits-list li i {
+      color: #a67c4e;
+      font-size: 0.85rem;
+      width: 18px;
+    }
+
+    .benefits-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    .footer-luxury {
+      background: #0a0a0a;
+      color: #d4cdc5;
+      border-top: 3px solid #a67c4e;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-bottom: 0;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      color: #d4cdc5;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .social-icon:hover {
+      background: #a67c4e;
+      color: #ffffff;
+      transform: translateY(-3px);
+      border-color: #a67c4e;
+    }
+
+    .footer-heading {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #b0a8a0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #a67c4e;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-copyright {
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      color: #8a827a;
+    }
+
+    .footer-divider {
+      margin: 0 12px;
+      color: #3a3a3a;
+    }
+
+    .footer-tag {
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a67c4e;
+    }
+
+    .footer-payment {
+      display: flex;
+      gap: 16px;
+      font-size: 1.4rem;
+      color: #6a625a;
+    }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 768px) {
+      .account-header h1 {
+        font-size: 2.8rem;
+      }
+      .account-card {
+        padding: 36px 28px;
+        margin-bottom: 24px;
+      }
+      .account-page {
+        padding: 50px 0 80px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .account-header h1 {
+        font-size: 2.2rem;
+      }
+      .account-card {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR                                                       -->
+  <!-- ============================================================ -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-custom d-flex align-items-center justify-content-between w-100">
+      <a class="navbar-brand" href="index.html">CHANEL <small>PARIS</small></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="far fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- ACCOUNT PAGE                                                 -->
+  <!-- ============================================================ -->
+  <section class="account-page">
+    <div class="container-custom">
+
+      <!-- Header -->
+      <div class="account-header">
+        <span class="page-label">— My Account —</span>
+        <h1>Welcome to <em>Chanel</em></h1>
+        <p>Sign in to your account or create a new one to unlock exclusive benefits.</p>
+      </div>
+
+      <!-- Two Columns: Sign In & Sign Up -->
+      <div class="row g-4">
+
+        <!-- LEFT: SIGN IN -->
+        <div class="col-lg-6">
+          <div class="account-card">
+            <span class="card-label">Sign In</span>
+            <h2 class="card-title">Welcome Back</h2>
+            <p class="card-subtitle">Enter your details to access your account.</p>
+
+            <form>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="your@email.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-input" placeholder="••••••••">
+              </div>
+
+              <div class="remember-row">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+
+              <button type="submit" class="btn-account">Sign In</button>
+
+              <a href="#" class="forgot-link">Forgot your password?</a>
+            </form>
+          </div>
+        </div>
+
+        <!-- RIGHT: SIGN UP -->
+        <div class="col-lg-6">
+          <div class="account-card signup-card">
+            <span class="card-label">Create Account</span>
+            <h2 class="card-title">Join Chanel</h2>
+            <p class="card-subtitle">New to CHANEL? Here's what you unlock.</p>
+
+            <ul class="benefits-list">
+              <li><i class="fas fa-heart"></i> Save your favorite perfumes to a wishlist</li>
+              <li><i class="fas fa-box"></i> Track your orders in real time</li>
+              <li><i class="fas fa-gift"></i> Receive exclusive member offers</li>
+              <li><i class="fas fa-star"></i> Early access to new launches</li>
+              <li><i class="fas fa-shipping-fast"></i> Faster checkout every time</li>
+            </ul>
+
+            <a href="#" class="btn-account-outline">Create an Account</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="footer-luxury">
+    <div class="container-custom">
+      <div class="row g-5 py-5 border-bottom border-light">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">CHANEL</h3>
+          <p class="footer-tagline">Timeless elegance. Original since 1910.</p>
+          <div class="footer-socials mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Shop</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Perfumes</a></li>
+            <li><a href="gift-sets.html">Gift Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">About</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Support</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="footer-heading">Follow</h5>
+          <p style="color: #b0a8a0; font-size: 0.8rem; font-weight: 300;">Stay connected for fragrance stories.</p>
+        </div>
+      </div>
+      <div class="footer-bottom py-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <div>
+            <span class="footer-copyright">© 2026 CHANEL INSPIRED</span>
+            <span class="footer-divider">|</span>
+            <span class="footer-tag">Always Be Original</span>
+          </div>
+          <div class="footer-payment">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

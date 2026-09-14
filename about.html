@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | CHANEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ============================================================ */
+    /* RESET & BASE                                                 */
+    /* ============================================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container-custom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* NAVBAR                                                       */
+    /* ============================================================ */
+    .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      color: #111 !important;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand small {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-left: 8px;
+    }
+
+    .navbar {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      background: #faf8f5;
+    }
+
+    .nav-link {
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      color: #222 !important;
+      padding: 0 16px !important;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a67c4e !important;
+    }
+
+    /* ============================================================ */
+    /* HERO - Opening Statement                                     */
+    /* ============================================================ */
+    .about-hero {
+      padding: 120px 0 100px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #faf8f5 0%, #f5f0eb 100%);
+      position: relative;
+    }
+
+    .about-hero .brand-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 12px;
+      color: #1a1a1a;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .about-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 5.5rem;
+      line-height: 1;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .about-hero h1 em {
+      font-style: italic;
+      color: #a67c4e;
+    }
+
+    .about-hero .opening-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: #a67c4e;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: #a67c4e;
+      margin: 40px auto;
+    }
+
+    /* ============================================================ */
+    /* NARRATIVE SECTIONS - Story Text                              */
+    /* ============================================================ */
+    .narrative-section {
+      padding: 100px 0;
+    }
+
+    .narrative-section.alt-bg {
+      background: #f5f0eb;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a67c4e;
+      margin-bottom: 24px;
+      font-weight: 500;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: #1a1a1a;
+      margin-bottom: 30px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: #a67c4e;
+      font-weight: 300;
+    }
+
+    .narrative-text {
+      font-weight: 300;
+      font-size: 1.02rem;
+      color: #3e3e3e;
+      line-height: 1.9;
+      letter-spacing: 0.3px;
+      margin-bottom: 24px;
+    }
+
+    .narrative-text.lead {
+      font-size: 1.15rem;
+      color: #2a2a2a;
+      font-weight: 400;
+    }
+
+    /* Short impactful lines (like "She challenged the conventions...") */
+    .impact-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: #1a1a1a;
+      line-height: 1.4;
+      margin: 32px 0;
+      padding-left: 28px;
+      border-left: 3px solid #a67c4e;
+    }
+
+    /* Single-word dramatic reveal (like "N°5.") */
+    .dramatic-reveal {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 8rem;
+      color: #1a1a1a;
+      line-height: 1;
+      letter-spacing: -3px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .dramatic-reveal em {
+      font-style: italic;
+      color: #a67c4e;
+    }
+
+    /* Three-line poetic stack */
+    .poetic-stack {
+      margin: 32px 0;
+      padding-left: 28px;
+      border-left: 3px solid #a67c4e;
+    }
+
+    .poetic-stack p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: #1a1a1a;
+      line-height: 1.5;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ============================================================ */
+    /* STORY IMAGES                                                 */
+    /* ============================================================ */
+    .story-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    }
+
+    .story-image {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+      display: block;
+    }
+
+    .story-image-wrapper:hover .story-image {
+      transform: scale(1.03);
+    }
+
+    .image-caption {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #a67c4e;
+      margin-top: 14px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    /* Small inline image for the middle of text */
+    .inline-image {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .inline-image img {
+      max-width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    /* ============================================================ */
+    /* HIGHLIGHT BOX - for the bottle description                   */
+    /* ============================================================ */
+    .highlight-box {
+      background: #ffffff;
+      border: 1px solid rgba(166, 124, 78, 0.2);
+      padding: 40px 36px;
+      margin: 40px 0;
+      border-radius: 2px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    }
+
+    .highlight-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 2rem;
+      color: #a67c4e;
+      letter-spacing: 2px;
+      margin-top: 16px;
+      display: block;
+    }
+
+    /* ============================================================ */
+    /* PHILOSOPHY SECTION - Dark                                 */
+    /* ============================================================ */
+    .philosophy-section {
+      padding: 120px 0;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .philosophy-section .section-label {
+      color: #a67c4e;
+    }
+
+    .philosophy-section .section-title {
+      color: #fff;
+    }
+
+    .philosophy-section .narrative-text {
+      color: #b0b0b0;
+    }
+
+    .philosophy-list {
+      margin-top: 40px;
+    }
+
+    .philosophy-item {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      color: #fff;
+      line-height: 1.4;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .philosophy-item:hover {
+      color: #a67c4e;
+      padding-left: 12px;
+    }
+
+    .philosophy-item:last-child {
+      border-bottom: none;
+    }
+
+    .philosophy-item em {
+      font-style: italic;
+      color: #a67c4e;
+    }
+
+    /* Dark section image */
+    .dark-story-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .dark-story-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+      display: block;
+    }
+
+    .dark-story-image-wrapper:hover .dark-story-image {
+      transform: scale(1.03);
+    }
+
+    /* ============================================================ */
+    /* LEGACY / CLOSING SECTION                                     */
+    /* ============================================================ */
+    .legacy-section {
+      padding: 120px 0;
+      text-align: center;
+      background: #f5f0eb;
+    }
+
+    .legacy-section .section-title {
+      font-size: 4rem;
+      margin-bottom: 40px;
+    }
+
+    .legacy-closing {
+      margin-top: 60px;
+      padding-top: 60px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .legacy-closing .brand-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 10px;
+      color: #1a1a1a;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .legacy-closing .legacy-lines p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    .footer-luxury {
+      background: #0a0a0a;
+      color: #d4cdc5;
+      border-top: 3px solid #a67c4e;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-bottom: 0;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      color: #d4cdc5;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .social-icon:hover {
+      background: #a67c4e;
+      color: #ffffff;
+      transform: translateY(-3px);
+      border-color: #a67c4e;
+    }
+
+    .footer-heading {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #b0a8a0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #a67c4e;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-copyright {
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      color: #8a827a;
+    }
+
+    .footer-divider {
+      margin: 0 12px;
+      color: #3a3a3a;
+    }
+
+    .footer-tag {
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a67c4e;
+    }
+
+    .footer-payment {
+      display: flex;
+      gap: 16px;
+      font-size: 1.4rem;
+      color: #6a625a;
+    }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 992px) {
+      .about-hero h1 {
+        font-size: 4rem;
+      }
+      .dramatic-reveal {
+        font-size: 6rem;
+      }
+      .section-title {
+        font-size: 2.8rem;
+      }
+      .story-image {
+        height: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 70px 0 60px 0;
+      }
+      .about-hero h1 {
+        font-size: 3rem;
+      }
+      .about-hero .brand-mark {
+        font-size: 1.8rem;
+        letter-spacing: 8px;
+      }
+      .about-hero .opening-line {
+        font-size: 1.3rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .dramatic-reveal {
+        font-size: 4.5rem;
+      }
+      .impact-line,
+      .poetic-stack p {
+        font-size: 1.3rem;
+      }
+      .philosophy-item {
+        font-size: 1.4rem;
+      }
+      .narrative-section,
+      .philosophy-section,
+      .legacy-section {
+        padding: 60px 0;
+      }
+      .legacy-section .section-title {
+        font-size: 2.5rem;
+      }
+      .legacy-closing .brand-signature {
+        font-size: 1.8rem;
+        letter-spacing: 6px;
+      }
+      .legacy-closing .legacy-lines p {
+        font-size: 1rem;
+        letter-spacing: 3px;
+      }
+      .story-image {
+        height: 350px;
+        margin-bottom: 24px;
+      }
+      .dark-story-image {
+        height: 350px;
+        margin-bottom: 24px;
+      }
+      .inline-image img {
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+      .dramatic-reveal {
+        font-size: 3.5rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .highlight-box {
+        padding: 28px 20px;
+      }
+      .highlight-box p {
+        font-size: 1.1rem;
+      }
+      .story-image {
+        height: 280px;
+      }
+      .dark-story-image {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR                                                       -->
+  <!-- ============================================================ -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-custom d-flex align-items-center justify-content-between w-100">
+    <span class="navbar-brand">
+      CHANEL <small>PARIS</small>
+    </span>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="far fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- HERO - Opening                                               -->
+  <!-- ============================================================ -->
+  <section class="about-hero">
+    <div class="container-custom">
+      <p class="brand-mark">CHANEL</p>
+      <h1>The Revolution<br><em>of Fragrance</em></h1>
+      <div class="hero-divider"></div>
+      <p class="opening-line">It began with a woman who refused to follow the rules.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1 - THE BEGINNING (with image)                       -->
+  <!-- ============================================================ -->
+  <section class="narrative-section">
+    <div class="container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="story-image-wrapper">
+            <img src="ASSETS/Founder of chanel.webp" alt="Founder of CHANEL" class="story-image">
+          </div>
+          <p class="image-caption">Gabrielle "Coco" Chanel — the woman who changed everything</p>
+        </div>
+        <div class="col-lg-7">
+          <span class="section-label">— The Beginning —</span>
+          <p class="narrative-text lead">
+            Before CHANEL became synonymous with luxury, there was Gabrielle Chanel — a woman determined to redefine what elegance could be.
+          </p>
+          <p class="narrative-text">
+            She challenged the conventions of her time.
+          </p>
+          <p class="narrative-text">
+            She freed women from restrictive fashion. She introduced simplicity where extravagance had dominated. She turned comfort into elegance and transformed her own name into a symbol of modernity.
+          </p>
+          <p class="narrative-text">
+            But fashion was only the beginning.
+          </p>
+          <p class="narrative-text">
+            In 1921, Gabrielle Chanel introduced a fragrance that would change the history of perfume forever.
+          </p>
+          <p class="dramatic-reveal" style="text-align: left;">N°5<em>.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2 - A SCENT LIKE NO OTHER (with inline image)        -->
+  <!-- ============================================================ -->
+  <section class="narrative-section alt-bg">
+    <div class="container-custom">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="section-label">— A Scent Like No Other —</span>
+          <h2 class="section-title">A Scent Like <em>No Other</em></h2>
+          
+          <p class="narrative-text">
+            At a time when women's fragrances were largely built around recognizable single floral notes, Gabrielle Chanel wanted something different.
+          </p>
+
+          <p class="narrative-text">She wanted a fragrance that could not be easily identified.</p>
+
+          <div class="poetic-stack">
+            <p>Something abstract.</p>
+            <p>Something unexpected.</p>
+          </div>
+
+          <p class="narrative-text">
+            Something that didn't smell like a flower picked from a garden — but like <strong>CHANEL</strong>.
+          </p>
+
+          <!-- Inline image -->
+          <div class="inline-image">
+            <img src="ASSETS/Chanel N05.webp" alt="The iconic N°5 bottle">
+          </div>
+
+          <p class="narrative-text">
+            The result was N°5, created with perfumer Ernest Beaux.
+          </p>
+
+          <p class="narrative-text">
+            Its revolutionary composition brought together an extraordinary bouquet of flowers, aldehydes and other ingredients in proportions that gave the fragrance its unmistakable character.
+          </p>
+
+          <p class="narrative-text">
+            The bottle itself rejected the ornate designs of the era.
+          </p>
+
+          <div class="highlight-box">
+            <p>Clean lines.</p>
+            <p>Minimal decoration.</p>
+            <p>A simple name.</p>
+            <span class="brand-name">N°5.</span>
+          </div>
+
+          <p class="impact-line">
+            It was modern before modern became fashionable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3 - FROM PERFUME TO ICON (with image)                -->
+  <!-- ============================================================ -->
+  <section class="narrative-section">
+    <div class="container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <span class="section-label">— From Perfume to Icon —</span>
+          <h2 class="section-title">From Perfume <em>to Icon</em></h2>
+
+          <p class="narrative-text">
+            N°5 didn't simply become a successful fragrance.
+          </p>
+
+          <p class="impact-line">
+            It became a cultural phenomenon.
+          </p>
+
+          <p class="narrative-text">
+            Generations discovered it. Artists referenced it. Hollywood helped turn it into an icon. And the name <strong>CHANEL</strong> became inseparable from the idea of timeless luxury.
+          </p>
+
+          <p class="narrative-text">
+            But Gabrielle Chanel's vision didn't stop with N°5.
+          </p>
+
+          <p class="narrative-text">
+            The House continued to explore fragrance as an art form — creating scents that could be fresh, sensual, mysterious, masculine, feminine, powerful or completely unexpected.
+          </p>
+
+          <p class="narrative-text">
+            From Coco Mademoiselle to Chance, from Bleu de Chanel to the exclusive creations of Les Exclusifs de CHANEL, each fragrance carries a different expression of the House.
+          </p>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2">
+          <div class="story-image-wrapper">
+            <img src="ASSETS/Chanel Collection3.jpg" alt="Chanel Icon" class="story-image">
+          </div>
+          <p class="image-caption">An icon that transcends generations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4 - THE CHANEL PHILOSOPHY (Dark, with image)         -->
+  <!-- ============================================================ -->
+  <section class="philosophy-section">
+    <div class="container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="dark-story-image-wrapper">
+            <img src="ASSETS/Chanel Philosophy.webp" alt="The Chanel Philosophy" class="dark-story-image">
+          </div>
+          <p class="image-caption" style="color: #a67c4e;">The philosophy behind every bottle</p>
+        </div>
+        <div class="col-lg-7">
+          <span class="section-label">— The Chanel Philosophy —</span>
+          <h2 class="section-title">The Chanel <em>Philosophy</em></h2>
+
+          <p class="narrative-text">
+            CHANEL has never been about simply following what is popular.
+          </p>
+
+          <p class="impact-line" style="color: #fff; border-color: #a67c4e;">
+            It is about creating what comes next.
+          </p>
+
+          <p class="narrative-text">
+            The House's approach to fragrance reflects the same philosophy that shaped its fashion:
+          </p>
+
+          <div class="philosophy-list">
+            <div class="philosophy-item">Simplicity can be <em>powerful.</em></div>
+            <div class="philosophy-item">Freedom can be <em>elegant.</em></div>
+            <div class="philosophy-item">Tradition can be <em>reinvented.</em></div>
+          </div>
+
+          <p class="narrative-text" style="margin-top: 40px;">
+            And luxury doesn't need to shout.
+          </p>
+
+          <p class="impact-line" style="color: #fff; border-color: #a67c4e;">
+            Sometimes, all it needs is a name.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 5 - THE LEGACY CONTINUES (Closing, with image)       -->
+  <!-- ============================================================ -->
+  <section class="legacy-section">
+    <div class="container-custom">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="section-label">— The Legacy Continues —</span>
+          <h2 class="section-title">The Legacy <em>Continues</em></h2>
+
+          <p class="narrative-text">
+            More than a century after Gabrielle Chanel changed the rules, the House continues to create fragrances that exist somewhere between tradition and rebellion.
+          </p>
+
+          <p class="narrative-text">
+            Each bottle is a continuation of an idea that began with one woman who dared to imagine luxury differently.
+          </p>
+
+          <p class="narrative-text">
+            Because CHANEL was never simply about creating something beautiful.
+          </p>
+
+          <!-- Closing image -->
+          <div class="inline-image">
+            <img src="ASSETS/Chanel Legacy.webp" alt="The CHANEL legacy">
+          </div>
+
+          <p class="impact-line" style="border: none; padding-left: 0; text-align: center;">
+            It was about creating something unforgettable.
+          </p>
+
+          <div class="legacy-closing">
+            <p class="brand-signature">CHANEL</p>
+            <div class="legacy-lines">
+              <p>A Legacy.</p>
+              <p>A Signature.</p>
+              <p>A Revolution That Never Ended.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="footer-luxury">
+    <div class="container-custom">
+      <div class="row g-5 py-5 border-bottom border-light">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">CHANEL</h3>
+          <p class="footer-tagline">Timeless elegance. Original since 1910.</p>
+          <div class="footer-socials mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Shop</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Perfumes</a></li>
+            <li><a href="gift-sets.html">Gift Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">About</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Support</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping-info.html">Shipping</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="footer-heading">Follow</h5>
+          <p style="color: #b0a8a0; font-size: 0.8rem; font-weight: 300;">Stay connected for fragrance stories.</p>
+        </div>
+      </div>
+      <div class="footer-bottom py-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <div>
+            <span class="footer-copyright">© 2026 CHANEL INSPIRED</span>
+            <span class="footer-divider">|</span>
+            <span class="footer-tag">Always Be Original</span>
+          </div>
+          <div class="footer-payment">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

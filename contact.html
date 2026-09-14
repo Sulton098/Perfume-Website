@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | CHANEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ============================================================ */
+    /* RESET & BASE                                                 */
+    /* ============================================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container-custom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* NAVBAR                                                       */
+    /* ============================================================ */
+    .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      color: #111 !important;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand small {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-left: 8px;
+    }
+
+    .navbar {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      background: #faf8f5;
+    }
+
+    .nav-link {
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      color: #222 !important;
+      padding: 0 16px !important;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a67c4e !important;
+    }
+
+    /* ============================================================ */
+    /* PAGE HEADER                                                  */
+    /* ============================================================ */
+    .contact-header {
+      padding: 100px 0 70px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #faf8f5 0%, #f5f0eb 100%);
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .contact-header .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a67c4e;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .contact-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #1a1a1a;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .contact-header h1 em {
+      font-style: italic;
+      color: #a67c4e;
+    }
+
+    .contact-header p {
+      font-weight: 300;
+      font-size: 1rem;
+      color: #5a5a5a;
+      max-width: 500px;
+      margin: 0 auto;
+      letter-spacing: 0.5px;
+    }
+
+    /* ============================================================ */
+    /* CONTACT MAIN - Form + Info                                   */
+    /* ============================================================ */
+    .contact-main {
+      padding: 90px 0;
+    }
+
+    /* Form */
+    .contact-form-wrapper {
+      background: #ffffff;
+      padding: 50px 44px;
+      border-radius: 4px;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .form-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      padding: 12px 0;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.3px;
+      margin-bottom: 24px;
+    }
+
+    .form-input:focus {
+      border-bottom-color: #a67c4e;
+    }
+
+    .form-input::placeholder {
+      color: #b0b0b0;
+      font-weight: 300;
+    }
+
+    textarea.form-input {
+      resize: vertical;
+      min-height: 120px;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin-bottom: 24px;
+    }
+
+    textarea.form-input:focus {
+      border-color: #a67c4e;
+    }
+
+    .btn-contact {
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 16px 48px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-contact:hover {
+      background: #a67c4e;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(166,124,78,0.25);
+    }
+
+    /* Info column */
+    .contact-info-wrapper {
+      padding-left: 40px;
+    }
+
+    .contact-info-block {
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .contact-info-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-info-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(166, 124, 78, 0.08);
+      border: 1px solid rgba(166, 124, 78, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a67c4e;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-info-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-info-text {
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #5a5a5a;
+      line-height: 1.8;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-info-text a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(166, 124, 78, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info-text a:hover {
+      color: #a67c4e;
+      border-bottom-color: #a67c4e;
+    }
+
+    /* ============================================================ */
+    /* INFO CARDS (3 across)                                        */
+    /* ============================================================ */
+    .info-cards-section {
+      padding: 0 0 90px 0;
+    }
+
+    .info-card {
+      background: #ffffff;
+      padding: 40px 28px;
+      border-radius: 4px;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0,0,0,0.03);
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(0,0,0,0.06);
+      border-color: rgba(166, 124, 78, 0.2);
+    }
+
+    .info-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(166, 124, 78, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #a67c4e;
+      font-size: 1.3rem;
+      transition: all 0.4s ease;
+    }
+
+    .info-card:hover .info-card-icon {
+      background: #a67c4e;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .info-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .info-card p {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #6a6a6a;
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+      margin-bottom: 0;
+    }
+
+    /* ============================================================ */
+    /* BOUTIQUE BANNER (Dark section with quote)                    */
+    /* ============================================================ */
+    .boutique-section {
+      padding: 100px 0;
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+    }
+
+    .boutique-section .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a67c4e;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .boutique-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1.3;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .boutique-section .boutique-caption {
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #a0a0a0;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    .footer-luxury {
+      background: #0a0a0a;
+      color: #d4cdc5;
+      border-top: 3px solid #a67c4e;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      margin-bottom: 0;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      color: #d4cdc5;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .social-icon:hover {
+      background: #a67c4e;
+      color: #ffffff;
+      transform: translateY(-3px);
+      border-color: #a67c4e;
+    }
+
+    .footer-heading {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #b0a8a0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #a67c4e;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-copyright {
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      color: #8a827a;
+    }
+
+    .footer-divider {
+      margin: 0 12px;
+      color: #3a3a3a;
+    }
+
+    .footer-tag {
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a67c4e;
+    }
+
+    .footer-payment {
+      display: flex;
+      gap: 16px;
+      font-size: 1.4rem;
+      color: #6a625a;
+    }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 992px) {
+      .contact-header h1 {
+        font-size: 3.5rem;
+      }
+      .contact-info-wrapper {
+        padding-left: 0;
+        margin-top: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-header {
+        padding: 60px 0 50px 0;
+      }
+      .contact-header h1 {
+        font-size: 2.8rem;
+      }
+      .contact-form-wrapper {
+        padding: 36px 28px;
+      }
+      .contact-main {
+        padding: 60px 0;
+      }
+      .boutique-section h2 {
+        font-size: 2rem;
+      }
+      .boutique-section {
+        padding: 60px 0;
+      }
+      .info-cards-section {
+        padding: 0 0 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-header h1 {
+        font-size: 2.2rem;
+      }
+      .contact-form-wrapper {
+        padding: 28px 22px;
+      }
+      .info-card {
+        padding: 30px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR                                                       -->
+  <!-- ============================================================ -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-custom d-flex align-items-center justify-content-between w-100">
+      <a class="navbar-brand" href="index.html">CHANEL <small>PARIS</small></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="far fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- PAGE HEADER                                                  -->
+  <!-- ============================================================ -->
+  <section class="contact-header">
+    <div class="container-custom">
+      <span class="page-label">— Get in Touch —</span>
+      <h1>Contact <em>Chanel</em></h1>
+      <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT MAIN - Form + Info                                   -->
+  <!-- ============================================================ -->
+  <section class="contact-main">
+    <div class="container-custom">
+      <div class="row g-5">
+
+        <!-- LEFT: Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-wrapper">
+            <span class="page-label" style="font-size: 0.7rem; letter-spacing: 5px; text-transform: uppercase; color: #a67c4e; font-weight: 500; margin-bottom: 16px; display: block;">— Send a Message —</span>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.2rem; color: #1a1a1a; margin-bottom: 32px; letter-spacing: -0.5px;">How Can We Help?</h2>
+
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-input" placeholder="Your name">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-input" placeholder="your@email.com">
+                </div>
+              </div>
+
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-input" placeholder="What is this regarding?">
+
+              <label class="form-label">Message</label>
+              <textarea class="form-input" placeholder="Tell us how we can help..."></textarea>
+
+              <button type="submit" class="btn-contact">
+                Send Message <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Info -->
+        <div class="col-lg-5">
+          <div class="contact-info-wrapper">
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <h3 class="contact-info-title">Visit Our Boutique</h3>
+              <p class="contact-info-text">
+                31 Rue Cambon<br>
+                75001 Paris, France<br>
+                Monday – Saturday: 10am – 7pm
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+              <h3 class="contact-info-title">Call Us</h3>
+              <p class="contact-info-text">
+                +33 1 44 55 66 77<br>
+                Monday – Friday: 9am – 6pm
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <h3 class="contact-info-title">Email Us</h3>
+              <p class="contact-info-text">
+                <a href="mailto:hello@chanel.com">hello@chanel.com</a><br>
+                <a href="mailto:support@chanel.com">support@chanel.com</a>
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon"><i class="fas fa-comments"></i></div>
+              <h3 class="contact-info-title">Follow Us</h3>
+              <div class="footer-socials" style="margin-top: 8px;">
+                <a href="#" class="social-icon" style="background: rgba(166, 124, 78, 0.08); color: #a67c4e; border-color: rgba(166, 124, 78, 0.2);"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" style="background: rgba(166, 124, 78, 0.08); color: #a67c4e; border-color: rgba(166, 124, 78, 0.2);"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" style="background: rgba(166, 124, 78, 0.08); color: #a67c4e; border-color: rgba(166, 124, 78, 0.2);"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INFO CARDS (3 across)                                        -->
+  <!-- ============================================================ -->
+  <section class="info-cards-section">
+    <div class="container-custom">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-shipping-fast"></i></div>
+            <h4>Free Shipping</h4>
+            <p>Complimentary worldwide shipping on all orders over $150.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-undo-alt"></i></div>
+            <h4>Easy Returns</h4>
+            <p>Not satisfied? Return within 30 days for a full refund.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-headset"></i></div>
+            <h4>24/7 Support</h4>
+            <p>Our fragrance experts are here to help anytime, anywhere.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BOUTIQUE QUOTE (Dark)                                        -->
+  <!-- ============================================================ -->
+  <section class="boutique-section">
+    <div class="container-custom">
+      <span class="section-label">— Visit Us —</span>
+      <h2>"Every visit to CHANEL is an experience in elegance."</h2>
+      <p class="boutique-caption">31 Rue Cambon · Paris</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="footer-luxury">
+    <div class="container-custom">
+      <div class="row g-5 py-5 border-bottom border-light">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">CHANEL</h3>
+          <p class="footer-tagline">Timeless elegance. Original since 1910.</p>
+          <div class="footer-socials mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Shop</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Perfumes</a></li>
+            <li><a href="gift-sets.html">Gift Sets</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">About</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-heading">Support</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping-info.html">Shipping</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="footer-heading">Follow</h5>
+          <p style="color: #b0a8a0; font-size: 0.8rem; font-weight: 300;">Stay connected for fragrance stories.</p>
+        </div>
+      </div>
+      <div class="footer-bottom py-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+          <div>
+            <span class="footer-copyright">© 2026 CHANEL INSPIRED</span>
+            <span class="footer-divider">|</span>
+            <span class="footer-tag">Always Be Original</span>
+          </div>
+          <div class="footer-payment">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

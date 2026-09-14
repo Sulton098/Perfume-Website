@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUCCISTORES</title>
+    <title>CHANELPERFUME</title>
 
      <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -301,6 +301,209 @@
 .add-to-cart:hover {
   background: #a67c4e;
   transform: scale(1.03);
+}
+/* ============================================================ */
+/* BESTSELLERS SECTION                                          */
+/* ============================================================ */
+.bestsellers-section {
+  padding: 100px 0;
+  background: #1a1a1a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative pattern */
+.bestsellers-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(166,124,78,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bestsellers-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.bestsellers-label {
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #a67c4e;
+  font-weight: 500;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.bestsellers-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.bestsellers-title em {
+  font-style: italic;
+  color: #a67c4e;
+}
+
+.bestsellers-subtitle {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  letter-spacing: 1px;
+}
+
+/* Best seller card */
+.bestseller-card {
+  background: #222222;
+  border-radius: 4px;
+  padding: 24px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.bestseller-card:hover {
+  transform: translateY(-8px);
+  background: #262626;
+  border-color: rgba(166, 124, 78, 0.3);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* Rank number */
+.bestseller-rank {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(166, 124, 78, 0.25);
+  line-height: 1;
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+
+.bestseller-card:hover .bestseller-rank {
+  color: rgba(166, 124, 78, 0.5);
+}
+
+/* Image wrapper */
+.bestseller-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 20px;
+  min-height: 220px;
+}
+
+.bestseller-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+}
+
+.bestseller-card:hover .bestseller-image {
+  transform: scale(1.08) translateY(-6px);
+}
+
+/* Card info */
+.bestseller-info {
+  text-align: center;
+  padding: 0 8px;
+}
+
+.bestseller-brand {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a67c4e;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.bestseller-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.bestseller-notes {
+  font-size: 0.75rem;
+  color: #8a8a8a;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.bestseller-price {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #a67c4e;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.btn-bestseller {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 28px;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-bestseller:hover {
+  background: #a67c4e;
+  border-color: #a67c4e;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bestsellers-title {
+    font-size: 2.4rem;
+  }
+  .bestsellers-section {
+    padding: 60px 0;
+  }
+  .bestsellers-header {
+    margin-bottom: 40px;
+  }
+  .bestseller-image {
+    width: 140px;
+    height: 140px;
+  }
+  .bestseller-rank {
+    font-size: 2.5rem;
+  }
 }
 /* ============================================================ */
 /* FOOTER - Luxury Chanel Style */
@@ -601,7 +804,7 @@
       box-shadow: 0 12px 28px rgba(0,0,0,0.04);
     }
 
-    /* ----- FOOTER (minimal) ----- */
+    /* ----- FOOTER----- */
      
 
     /* ----- responsive fine-tuning ----- */
@@ -670,12 +873,11 @@
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search me-1"></i> </a></li>
           <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Bestsellers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bestsellers">Bestsellers</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
           
-          <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="far fa-user"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart2"></i></a></li>
         </ul>
       </div>
@@ -711,7 +913,7 @@
 
           <!-- SHOP NOW button -->
           <div>
-            <a href="#" class="btn-shop">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+            <a href="shop.html" class="btn-shop">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
           </div>
 
           
@@ -763,29 +965,37 @@
     <div class="row g-4">
 
       <!-- Product 1 -->
-      <div class="col-md-4">
-        <div class="product-card">
-          <div class="product-image-wrapper">
-            <img src="ASSETS/Coco Mademoiselle.avif" alt="Coco Mademoiselle" class="product-image">
-          </div>
-          <div class="product-info text-center">
-            <h5 class="product-name">Coco Mademoiselle</h5>
-            <p class="product-price">$185.00</p>
-            <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
-              <i class="fas fa-shopping-cart me-2"></i> Add to Cart
-            </button>
-          </div>
-        </div>
+<div class="col-md-4">
+  <div class="product-card">
+    <a href="product-detail-coco.html" style="text-decoration: none; color: inherit;">
+      <div class="product-image-wrapper">
+        <img src="ASSETS/Coco Mademoiselle.avif" alt="Coco Mademoiselle" class="product-image">
       </div>
+    </a>
+    <div class="product-info text-center">
+      <a href="product-detail-coco.html" style="text-decoration: none; color: inherit;">
+        <h5 class="product-name">Coco Mademoiselle</h5>
+      </a>
+      <p class="product-price">$185.00</p>
+      <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
+        <i class="fas fa-shopping-cart me-2"></i> Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
 
       <!-- Product 2 -->
       <div class="col-md-4">
         <div class="product-card">
+          <a href="product-detail-bleu.html" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
             <img src="ASSETS/Bleu De Chanel.webp" alt="Bleu De Chanel" class="product-image">
           </div>
+          </a>
           <div class="product-info text-center">
-            <h5 class="product-name">Bleu De Chanel</h5>
+            <a href="product-detail-bleu.html" style="text-decoration: none; color: inherit;">
+              <h5 class="product-name">Bleu De Chanel</h5>
+            </a>
             <p class="product-price">$248.00</p>
             <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
               <i class="fas fa-shopping-cart me-2"></i> Add to Cart
@@ -797,11 +1007,15 @@
       <!-- Product 3 -->
       <div class="col-md-4">
         <div class="product-card">
-          <div class="product-image-wrapper">
-            <img src="ASSETS/Chanel N05.webp" alt="Chanel N05" class="product-image">
-          </div>
+          <a href="product-detail-N05.html" style="text-decoration: none; color: inherit;">
+            <div class="product-image-wrapper">
+              <img src="ASSETS/Chanel N05.webp" alt="Chanel N05" class="product-image">
+            </div>
+          </a>
           <div class="product-info text-center">
-            <h5 class="product-name">Chanel N05</h5>
+            <a href="product-detail-N05.html" style="text-decoration: none; color: inherit;">
+              <h5 class="product-name">Chanel N05</h5>
+            </a>
             <p class="product-price">$197.00</p>
             <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
               <i class="fas fa-shopping-cart me-2"></i> Add to Cart
@@ -818,11 +1032,15 @@
       <!-- Product 4 -->
       <div class="col-md-4">
         <div class="product-card">
+          <a href="product-detail-noir.html" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
             <img src="ASSETS/Coco Noir.webp" alt="Coco Noir" class="product-image">
           </div>
+          </a>
           <div class="product-info text-center">
+            <a href="product-detail-noir.html" style="text-decoration: none; color: inherit;">
             <h5 class="product-name">Coco Noir</h5>
+            </a>
             <p class="product-price">$185.00</p>
             <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
               <i class="fas fa-shopping-cart me-2"></i> Add to Cart
@@ -834,11 +1052,15 @@
       <!-- Product 5 -->
       <div class="col-md-4">
         <div class="product-card">
+           <a href="product-detail-platinum-egoiste.html" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
             <img src="ASSETS/Chanel Egoiste Platinum.webp" alt="Chanel Egoiste Platinum" class="product-image">
           </div>
+           </a>
           <div class="product-info text-center">
+             <a href="product-detail-platinum-egoiste.html" style="text-decoration: none; color: inherit;">
             <h5 class="product-name">Chanel Platinum Egoiste</h5>
+             </a>
             <p class="product-price">$145.00</p>
             <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
               <i class="fas fa-shopping-cart me-2"></i> Add to Cart
@@ -850,11 +1072,15 @@
       <!-- Product 6 -->
       <div class="col-md-4">
         <div class="product-card">
+          <a href="product-detail-chance.html" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
             <img src="ASSETS/Chance Chanel.avif" alt="Chance Chanel" class="product-image">
           </div>
+        </a>
           <div class="product-info text-center">
+            <a href="product-detail-chance.html" style="text-decoration: none; color: inherit;">
             <h5 class="product-name">Chance Chanel</h5>
+            </a>
             <p class="product-price">$185.00</p>
             <button class="btn btn-dark rounded-pill px-4 py-2 add-to-cart">
               <i class="fas fa-shopping-cart me-2"></i> Add to Cart
@@ -868,7 +1094,73 @@
   </div>  <!-- END of container-custom -->
 </section>  <!-- END of product-showcase -->
 
-   
+   <!-- ============================================================ -->
+<!-- BESTSELLERS SECTION                                          -->
+<!-- ============================================================ -->
+<section id="bestsellers" class="bestsellers-section">
+  <div class="container-custom">
+
+    <!-- Header -->
+    <div class="bestsellers-header">
+      <span class="bestsellers-label">— Most Loved —</span>
+      <h2 class="bestsellers-title">Our <em>Bestsellers</em></h2>
+      <p class="bestsellers-subtitle">The scents everyone is talking about</p>
+    </div>
+
+    <!-- Bestsellers Grid -->
+    <div class="row g-4">
+
+      <!-- #1 Bestseller -->
+      <div class="col-md-4">
+        <div class="bestseller-card">
+          <span class="bestseller-rank">01</span>
+          <div class="bestseller-image-wrapper">
+            <img src="ASSETS/Chanel N05.webp" alt="Chanel N°5" class="bestseller-image">
+          </div>
+          <div class="bestseller-info">
+            <p class="bestseller-brand">Chanel</p>
+            <h5 class="bestseller-name">Chanel N°5</h5>
+            <p class="bestseller-notes">Ylang-Ylang · Aldehydes · Sandalwood</p>
+            <p class="bestseller-price">$197.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #2 Bestseller -->
+      <div class="col-md-4">
+        <div class="bestseller-card">
+          <span class="bestseller-rank">02</span>
+          <div class="bestseller-image-wrapper">
+            <img src="ASSETS/Bleu De Chanel.webp" alt="Bleu De Chanel" class="bestseller-image">
+          </div>
+          <div class="bestseller-info">
+            <p class="bestseller-brand">Chanel</p>
+            <h5 class="bestseller-name">Bleu De Chanel</h5>
+            <p class="bestseller-notes">Citrus · Cedar · Amber</p>
+            <p class="bestseller-price">$248.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #3 Bestseller -->
+      <div class="col-md-4">
+        <div class="bestseller-card">
+          <span class="bestseller-rank">03</span>
+          <div class="bestseller-image-wrapper">
+            <img src="ASSETS/Coco Mademoiselle.avif" alt="Coco Mademoiselle" class="bestseller-image">
+          </div>
+          <div class="bestseller-info">
+            <p class="bestseller-brand">Chanel</p>
+            <h5 class="bestseller-name">Coco Mademoiselle</h5>
+            <p class="bestseller-notes">Rose · Jasmine · Patchouli</p>
+            <p class="bestseller-price">$185.00</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   
       
   <!-- ============================================================ -->
@@ -933,10 +1225,8 @@
       <div class="col-lg-2 col-md-4">
         <h5 class="footer-heading">Shop</h5>
         <ul class="footer-links">
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Bestsellers</a></li>
-          <li><a href="#">Gift Sets</a></li>
-          <li><a href="#">Limited Edition</a></li>
+          <li><a href="#bestsellers">Bestsellers</a></li>
+          <li><a href="gift-sets.html">Gift Sets</a></li>
         </ul>
       </div>
       
@@ -944,10 +1234,10 @@
       <div class="col-lg-2 col-md-4">
         <h5 class="footer-heading">About</h5>
         <ul class="footer-links">
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Craftsmanship</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="craftsmanship.html">Craftsmanship</a></li>
+          <li><a href="career.html">Careers</a></li>
         </ul>
       </div>
       
@@ -955,10 +1245,10 @@
       <div class="col-lg-2 col-md-4">
         <h5 class="footer-heading">Support</h5>
         <ul class="footer-links">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="shipping-info.html">Shipping Info</a></li>
+          <li><a href="returns.html">Returns</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
         </ul>
       </div>
       

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability | Chanel Perfume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container-custom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- BACK LINK ----- */
+    .back-link {
+      display: inline-block;
+      margin: 30px 0 10px 0;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #a67c4e;
+      transform: translateX(-4px);
+    }
+
+    /* ----- HERO SECTION ----- */
+    .sustain-hero {
+      padding: 20px 0 70px 0;
+      text-align: center;
+    }
+
+    .sustain-hero h1 {
+      font-weight: 300;
+      font-size: 4.2rem;
+      letter-spacing: 14px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .sustain-hero .gold-line {
+      width: 80px;
+      height: 2px;
+      background: #a67c4e;
+      margin: 0 auto 24px auto;
+    }
+
+    .sustain-hero p {
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #6c6c6c;
+      text-transform: uppercase;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ----- COMMITMENT BANNER ----- */
+    .commitment-banner {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .commitment-banner h2 {
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .commitment-banner p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      color: #b0a8a0;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ----- PILLARS SECTION ----- */
+    .pillars-section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .pillar-card {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 4px;
+      padding: 40px 30px;
+      height: 100%;
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      border-color: #e6ddd2;
+    }
+
+    .pillar-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #f5f0eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px auto;
+      font-size: 2rem;
+      color: #a67c4e;
+      transition: all 0.4s ease;
+    }
+
+    .pillar-card:hover .pillar-icon {
+      background: #a67c4e;
+      color: #fff;
+      transform: scale(1.1) rotate(6deg);
+    }
+
+    .pillar-card h4 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #6c6c6c;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ----- STATS SECTION ----- */
+    .stats-section {
+      padding: 60px 0;
+      background: #fcfaf8;
+      border-top: 1px solid rgba(0,0,0,0.03);
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-weight: 300;
+      font-size: 3.5rem;
+      letter-spacing: -1px;
+      color: #a67c4e;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #6c6c6c;
+      text-transform: uppercase;
+    }
+
+    /* ----- TIMELINE / GOALS ----- */
+    .goals-section {
+      padding: 80px 0;
+    }
+
+    .goal-item {
+      display: flex;
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .goal-item:hover {
+      padding-left: 12px;
+      border-bottom-color: #a67c4e;
+    }
+
+    .goal-year {
+      font-weight: 300;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #a67c4e;
+      min-width: 100px;
+      line-height: 1.2;
+    }
+
+    .goal-content h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .goal-content p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #6c6c6c;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ----- QUOTE SECTION ----- */
+    .quote-section {
+      padding: 80px 0;
+      text-align: center;
+      background: #f5f0eb;
+    }
+
+    .quote-section blockquote {
+      font-weight: 300;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+
+    .quote-section cite {
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* ----- CTA SECTION ----- */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .cta-section h2 {
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #b0a8a0;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background: #a67c4e;
+      color: #fff;
+      border: none;
+      padding: 16px 48px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      background: #ffffff;
+      color: #1a1a1a;
+      transform: scale(1.04);
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .sustain-hero h1 {
+        font-size: 2.4rem;
+        letter-spacing: 6px;
+      }
+      .section-title {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+      }
+      .commitment-banner h2 {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+      }
+      .stat-number {
+        font-size: 2.4rem;
+      }
+      .goal-item {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .goal-year {
+        font-size: 1.4rem;
+        min-width: auto;
+      }
+      .quote-section blockquote {
+        font-size: 1.2rem;
+      }
+      .cta-section h2 {
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sustain-hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
+      .sustain-hero p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- BACK LINK -->
+  <!-- ============================================================ -->
+  <div class="container-custom">
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left me-2"></i> Back to Home
+    </a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="sustain-hero">
+    <div class="container-custom">
+      <h1>Sustainability</h1>
+      <div class="gold-line"></div>
+      <p>Beauty that respects the world it comes from</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- COMMITMENT BANNER -->
+  <!-- ============================================================ -->
+  <section class="commitment-banner">
+    <div class="container-custom">
+      <h2>Our Commitment</h2>
+      <p>
+        At Chanel, sustainability is not a trend — it is a responsibility. 
+        We are dedicated to preserving the planet's resources, supporting 
+        the communities that cultivate our ingredients, and creating 
+        fragrances that are as kind to the earth as they are beautiful.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PILLARS SECTION -->
+  <!-- ============================================================ -->
+  <section class="pillars-section">
+    <div class="container-custom">
+      <h2 class="section-title">Our Pillars</h2>
+      <p class="section-subtitle">Three areas of focus</p>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+            <h4>Natural Ingredients</h4>
+            <p>
+              We source our ingredients from sustainable farms and 
+              cooperatives, ensuring that every harvest respects 
+              biodiversity and supports local communities.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-recycle"></i></div>
+            <h4>Responsible Packaging</h4>
+            <p>
+              Our packaging is designed to be refillable, recyclable, 
+              and made from responsibly sourced materials. We are 
+              committed to reducing waste at every stage.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h4>Community Support</h4>
+            <p>
+              We invest in the communities that grow our ingredients, 
+              providing fair wages, education, and resources to build 
+              a more equitable future for all.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STATS SECTION -->
+  <!-- ============================================================ -->
+  <section class="stats-section">
+    <div class="container-custom">
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Refillable Bottles</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <div class="stat-number">85%</div>
+            <div class="stat-label">Recycled Glass</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Partner Farms</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Single-Use Plastic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- GOALS TIMELINE -->
+  <!-- ============================================================ -->
+  <section class="goals-section">
+    <div class="container-custom">
+      <h2 class="section-title">Our Goals</h2>
+      <p class="section-subtitle">Looking ahead</p>
+
+      <div class="goal-item">
+        <div class="goal-year">2026</div>
+        <div class="goal-content">
+          <h4>Carbon Neutral Operations</h4>
+          <p>
+            Achieve carbon neutrality across all our production facilities 
+            and boutiques worldwide.
+          </p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <div class="goal-year">2028</div>
+        <div class="goal-content">
+          <h4>100% Sustainable Ingredients</h4>
+          <p>
+            Source all raw materials from certified sustainable suppliers 
+            with full traceability from farm to bottle.
+          </p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <div class="goal-year">2030</div>
+        <div class="goal-content">
+          <h4>Zero Waste Packaging</h4>
+          <p>
+            Eliminate all non-recyclable packaging and introduce 
+            refillable alternatives across every product line.
+          </p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <div class="goal-year">2035</div>
+        <div class="goal-content">
+          <h4>Regenerative Agriculture</h4>
+          <p>
+            Support regenerative farming practices that restore soil health 
+            and enhance biodiversity in all our sourcing regions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- QUOTE SECTION -->
+  <!-- ============================================================ -->
+  <section class="quote-section">
+    <div class="container-custom">
+      <blockquote>
+        "The most beautiful things in the world cannot be seen or touched — 
+        they are felt with the heart."
+      </blockquote>
+      <cite>— Coco Chanel</cite>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CTA SECTION -->
+  <!-- ============================================================ -->
+  <section class="cta-section">
+    <div class="container-custom">
+      <h2>Join Our Journey</h2>
+      <p>Discover how we're shaping a more beautiful, sustainable future</p>
+      <a href="#" class="cta-btn">Learn More</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | Chanel Perfume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container-custom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- BACK LINK ----- */
+    .back-link {
+      display: inline-block;
+      margin: 30px 0 10px 0;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #a67c4e;
+      transform: translateX(-4px);
+    }
+
+    /* ----- HERO SECTION ----- */
+    .careers-hero {
+      padding: 20px 0 70px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .careers-hero h1 {
+      font-weight: 300;
+      font-size: 4.5rem;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .careers-hero .gold-line {
+      width: 80px;
+      height: 2px;
+      background: #a67c4e;
+      margin: 0 auto 24px auto;
+    }
+
+    .careers-hero p {
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #6c6c6c;
+      text-transform: uppercase;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ----- INTRO SECTION ----- */
+    .intro-section {
+      padding: 60px 0;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .intro-section h2 {
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .intro-section p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      line-height: 1.8;
+    }
+
+    .intro-section .gold-quote {
+      font-weight: 300;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: #a67c4e;
+      font-style: italic;
+      border-left: 3px solid #a67c4e;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    /* ----- VALUES SECTION ----- */
+    .values-section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: #a67c4e;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 30px 20px;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .value-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #f5f0eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      font-size: 1.6rem;
+      color: #a67c4e;
+      transition: all 0.4s ease;
+    }
+
+    .value-card:hover .value-icon {
+      background: #a67c4e;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .value-card h4 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #6c6c6c;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ----- OPEN POSITIONS ----- */
+    .positions-section {
+      padding: 60px 0 80px 0;
+      background: #fcfaf8;
+      border-top: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .position-card {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 4px;
+      padding: 28px 30px;
+      margin-bottom: 16px;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .position-card:hover {
+      border-color: #a67c4e;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+      transform: translateX(6px);
+    }
+
+    .position-info h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .position-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.8rem;
+      color: #888;
+      letter-spacing: 1px;
+    }
+
+    .position-meta span i {
+      color: #a67c4e;
+      margin-right: 6px;
+    }
+
+    .position-btn {
+      background: transparent;
+      color: #1a1a1a;
+      border: 1.5px solid #1a1a1a;
+      padding: 10px 28px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .position-btn:hover {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    /* ----- CTA SECTION ----- */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .cta-section h2 {
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #b0a8a0;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background: #a67c4e;
+      color: #fff;
+      border: none;
+      padding: 16px 48px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      background: #ffffff;
+      color: #1a1a1a;
+      transform: scale(1.04);
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .careers-hero h1 {
+        font-size: 2.6rem;
+        letter-spacing: 6px;
+      }
+      .intro-section h2,
+      .section-title {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+      }
+      .position-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .position-btn {
+        width: 100%;
+        text-align: center;
+      }
+      .cta-section h2 {
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .careers-hero h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+      }
+      .careers-hero p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- BACK LINK -->
+  <!-- ============================================================ -->
+  <div class="container-custom">
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left me-2"></i> Back to Home
+    </a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="careers-hero">
+    <div class="container-custom">
+      <h1>Careers</h1>
+      <div class="gold-line"></div>
+      <p>Join a legacy of elegance, craftsmanship, and originality</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INTRO SECTION -->
+  <!-- ============================================================ -->
+  <section class="intro-section">
+    <div class="container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2>More Than a Job</h2>
+          <p>
+            At Chanel, we believe that every individual brings a unique essence to our maison. 
+            For over a century, we have cultivated an environment where creativity, precision, 
+            and passion converge to create timeless elegance. When you join us, you become 
+            part of a legacy that celebrates originality in every form.
+          </p>
+          <p class="gold-quote">
+            "Fashion fades, only style remains the same." — Coco Chanel
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="value-card">
+                <div class="value-icon"><i class="fas fa-users"></i></div>
+                <h4>Craftsmanship</h4>
+                <p>Every detail matters. We honor the art of perfumery.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <div class="value-icon"><i class="fas fa-globe"></i></div>
+                <h4>Global Reach</h4>
+                <p>Presence in over 100 countries, one spirit.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <div class="value-icon"><i class="fas fa-seedling"></i></div>
+                <h4>Sustainability</h4>
+                <p>Committed to a beautiful, responsible future.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <div class="value-icon"><i class="fas fa-star"></i></div>
+                <h4>Excellence</h4>
+                <p>We settle for nothing less than extraordinary.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- VALUES SECTION -->
+  <!-- ============================================================ -->
+  <section class="values-section">
+    <div class="container-custom">
+      <h2 class="section-title">Our Culture</h2>
+      <p class="section-subtitle">What defines us</p>
+
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h4>Passion</h4>
+            <p>We pour our hearts into every scent, every bottle, every moment.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+            <h4>Innovation</h4>
+            <p>We honor tradition while boldly shaping the future of fragrance.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+            <h4>Integrity</h4>
+            <p>We act with authenticity, transparency, and respect for all.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- OPEN POSITIONS -->
+  <!-- ============================================================ -->
+  <section class="positions-section">
+    <div class="container-custom">
+      <h2 class="section-title">Open Positions</h2>
+      <p class="section-subtitle">Find your place in our maison</p>
+
+      <!-- Position 1 -->
+      <div class="position-card">
+        <div class="position-info">
+          <h4>Senior Perfumer</h4>
+          <div class="position-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+            <span><i class="fas fa-clock"></i> Full-time</span>
+            <span><i class="fas fa-briefcase"></i> Creative</span>
+          </div>
+        </div>
+        <button class="position-btn">Apply Now</button>
+      </div>
+
+      <!-- Position 2 -->
+      <div class="position-card">
+        <div class="position-info">
+          <h4>Brand Manager</h4>
+          <div class="position-meta">
+            <span><i class="fas fa-map-marker-alt"></i> New York, USA</span>
+            <span><i class="fas fa-clock"></i> Full-time</span>
+            <span><i class="fas fa-briefcase"></i> Marketing</span>
+          </div>
+        </div>
+        <button class="position-btn">Apply Now</button>
+      </div>
+
+      <!-- Position 3 -->
+      <div class="position-card">
+        <div class="position-info">
+          <h4>Fragrance Development Chemist</h4>
+          <div class="position-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Grasse, France</span>
+            <span><i class="fas fa-clock"></i> Full-time</span>
+            <span><i class="fas fa-briefcase"></i> Research</span>
+          </div>
+        </div>
+        <button class="position-btn">Apply Now</button>
+      </div>
+
+      <!-- Position 4 -->
+      <div class="position-card">
+        <div class="position-info">
+          <h4>Retail Experience Specialist</h4>
+          <div class="position-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
+            <span><i class="fas fa-clock"></i> Full-time</span>
+            <span><i class="fas fa-briefcase"></i> Retail</span>
+          </div>
+        </div>
+        <button class="position-btn">Apply Now</button>
+      </div>
+
+      <!-- Position 5 -->
+      <div class="position-card">
+        <div class="position-info">
+          <h4>Digital Content Creator</h4>
+          <div class="position-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+            <span><i class="fas fa-clock"></i> Contract</span>
+            <span><i class="fas fa-briefcase"></i> Creative</span>
+          </div>
+        </div>
+        <button class="position-btn">Apply Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CTA SECTION -->
+  <!-- ============================================================ -->
+  <section class="cta-section">
+    <div class="container-custom">
+      <h2>Ready to Begin?</h2>
+      <p>Discover a career as extraordinary as our fragrances</p>
+      <a href="#" class="cta-btn">Send Your Application</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
